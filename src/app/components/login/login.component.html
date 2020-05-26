@@ -1,0 +1,28 @@
+
+<div class="center">
+    <h2>Login</h2>
+    <h3>{{msg}}</h3>
+    <form (submit)='doLogin()' [formGroup]='loginForm'>
+      <div class="input_field">
+      <input type="text" formControlName="username" name="username" placeholder="Name" required="">
+      <span></span>
+      <p class='alert alert-danger' *ngIf="usernameCtrl.invalid && usernameCtrl.touched">
+        Please enter your name.
+      </p>
+    </div>
+    <div class="input_field">
+      <input type="password" formControlName="password" id="password-field"  placeholder="Password" name="password" required="">
+      <button type="button" id="eye-btn" class="fas fa-eye"></button>
+      <span></span>
+      <p class='alert alert-danger'
+        *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+        Please enter your password.
+      </p>
+    </div>
+      <input type="submit" value="Login">
+      
+    </form>
+  </div>
+  
+
+

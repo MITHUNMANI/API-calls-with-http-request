@@ -1,0 +1,16 @@
+<app-welcome></app-welcome>
+<div class="container">
+<h2>{{news.totalresults}}</h2>
+  <div class="card card-sec" *ngFor="let x of news.articles; index as i">
+      <img src="{{x.urlToImage}}" class="card-img">
+      <div class="card-body">
+
+              <h5 class='card-title'><br>
+                <b>{{x.title}}</b>
+            </h5>
+                  <p class="card-text">{{x.description | slice:0:60}}...</p>
+      </div>
+                  <input type="button" class="btn btn-primary" value="Read More" (click)="fulldesc(x)">
+            
+</div>
+</div>

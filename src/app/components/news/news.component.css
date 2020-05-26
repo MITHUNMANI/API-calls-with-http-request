@@ -1,0 +1,17 @@
+img.card-img {
+    max-width: 200px;
+}
+.card.card-sec {
+    max-width: 244px;
+    max-height: 100%;
+    display: inline-block;
+    padding: 20px 15px 12px 5px;
+    border: none;
+    margin: 50px 10px 15px;
+    border-bottom: 1px solid white;
+}
+h5.card-title {
+    font-size: 16px;
+    color: linear-gradient(120deg, #2980b9, #8e44ad);
+    font-style: italic;
+}

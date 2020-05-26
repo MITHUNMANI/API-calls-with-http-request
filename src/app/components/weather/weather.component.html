@@ -1,0 +1,28 @@
+<app-welcome></app-welcome>
+<div class="container">
+<div class="cover">
+  <div class="heading">
+    <h2>Search City</h2>
+</div>
+<div class="form-sec">
+    <div id="wrap">
+        <form action="" autocomplete="on">
+        <input id="search" #cityname name="search" type="text" placeholder="What're you looking for ?">
+        <input id="search_submit" data-toggle="tooltip" title="Search" (click)="getWeatherData(cityname.value)" value="Rechercher" type="submit">
+        </form>
+      </div>
+    <!-- <input type="text" #cityname placeholder="Enter city" >
+    <input type="button" id="submit" value="Search" (click)="getWeatherData(cityname.value)"> -->
+</div>
+</div>
+<div class="container">
+    <div class="list">
+   <ul *ngIf=show> 
+       <li>City Name : {{city}}</li>
+       <li>Country : {{country}}</li>
+       <li>Temperature : {{temperature}}</li>
+       <li>Humidity : {{humidity}}</li>
+</ul>
+</div>
+</div>
+</div>
